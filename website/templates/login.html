@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
 {% extends "base.html" %}
 <title>{% block title %}Login{% endblock %}</title>
@@ -6,14 +6,16 @@
 <html lang="en"> 
   <head>
     <meta charset="UTF-8">
-    <title>First Pitch</title> 
-	<link rel="stylesheet" href="../static/login.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  </head>
-  <body>
-	<div class="login-form">
+    <title>First Pitch</title>
+    <link rel="stylesheet" href="../static/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="login-form">
         <div class="login-header">
-            <h3 style="font-weight: 700;">Login</h3>
+            <h3 style="font-weight: 700;">LOGIN</h3>
         </div>
         <form method="POST">
           <div class = "form-group">
@@ -32,8 +34,28 @@
               name="password1"
               placeholder="Confirm password"/>
           </div>
-          <button type="submit" class="btn btn-primary">submit</button>
+          <div style="text-align: right; font-weight: 50; font-style: italic;"><small>Forgot Password?</small></div>
+          <button type="submit" class="btn btn-primary rounded-pill">LOGIN</button>
       </form>
+        <!-- <form class="form-inputs">
+            <div class="form-group">
+                <label for="emailInput" style="font-style: italic;">Email address</label>
+                <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="passwordInput" style="font-style: italic;">Password</label>
+                <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+            </div>
+            <div style="text-align: right; font-weight: 50; font-style: italic;"><small>Forgot Password?</small></div>
+            <button type="submit" class="btn login-btn rounded-pill"><span
+                    style="font-weight: 500; color:white">LOGIN</span></button>
+        </form> -->
+        <div class="other-signup">
+            <h6 style="font-weight: 100;"><small>Not a member?</small></h6>
+            <small><a href="/sign-up" style="text-decoration: none; font-weight: 600; color:grey">SIGN UP</a></small>
+        </div>
+    </div>
   </body>
 </html> 
 {% endblock %}
