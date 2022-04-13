@@ -1,4 +1,6 @@
 from website import create_app
+from website import views
+from website import auth
 
 app = create_app()
 
