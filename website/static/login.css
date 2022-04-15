@@ -9,11 +9,11 @@ body {
 .login-form{
     margin: auto;
     width: 20rem;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
     height: 100%;
     padding: 3rem 2rem 4rem 2rem;
     margin-top: 10rem;
-    box-shadow: 0px 0px 60px  rgb(128, 128, 128);
+    box-shadow: 0px 0px 60px  rgb(0, 225, 255);
     border-radius: 0.5rem;
 }
 
@@ -30,7 +30,7 @@ body {
     margin-top: 1rem;
 }
 
-.btn {
+.login-btn {
     width: 100%;
     margin-top: 1rem;
     background-image: url('gradient_bg.jpg');

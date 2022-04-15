@@ -1,6 +1,47 @@
-.jumbotron {
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+body{
+    background-color: black;
+}
+
+.first-pic{
+    width: 40rem;
+    height: 25rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    transform: rotate(5deg);
+    background-image: url('homepage_pic2.jpg');
+    background-size: 40rem;
+}
+.second-pic{
+    width: 40rem;
+    height: 30rem;
+    margin-top: -10rem;
+    margin-left: 10rem;
+    border-radius: 1rem;
+    transform: rotate(-5deg);
+    background-image: url('homepage_pic1.jpg');
+    background-size: 40rem;
+}
+
+.left{
+    margin-top: 20rem;
+    margin-left: -15rem;
     text-align: center;
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.header {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 7rem;
+}
+
+.start-btn {
     margin-top: 2rem;
-    background-color: lightgray;
-    height: 20rem;
+    margin-right: 2rem;
 }
