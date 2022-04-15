@@ -1,41 +1,38 @@
-{% extends "base.html" %}
-<title>{% block title %}Sign up{% endblock %}</title>
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
-<form method="POST">
-    <h3 align="center">Sign up</h3>
-    <div class = "form-group">
-        <label for="email">Email Address</label>
-        <input type="email" 
-        class="form-control" 
-        id="email" 
-        name="email"
-        placeholder="Enter email"/>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>SOEN 357 Project</title>
+    <link rel="stylesheet" href="../static/signupassets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
+    <link rel="stylesheet" href="../static/signupassets/css/Google-Style-Text-Input.css">
+    <link rel="stylesheet" href="../static/signupassets/css/Number-Input-Without-Arrow.css">
+    <link rel="stylesheet" href="../static/signupassets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body style="background: url(&quot;../static/signupassets/img/background.jpg&quot;) top / cover repeat;">
+    <div style="height: 750px;background: #ffffff;width: 1260px;margin-left: 364px;margin-top: 135px;box-shadow: 0px 0px 20px 11px var(--bs-info);border-radius: 16px;">
+        <div style="color: var(--bs-red);height: 750px;background: url(&quot;../static/signupassets/img/picture1.jpeg&quot;), var(--bs-body-bg);width: 623px;margin-left: 637px;border-radius: 0px;border-top-right-radius: 15px;border-bottom-right-radius: 15px;"></div>
+        <h1 style="margin-top: -698px;margin-left: 226px;width: 331px;font-size: 45px;font-weight: bold;font-family: ABeeZee, sans-serif;height: 65px;">Sign Up</h1>
+        <form method="POST">
+        <h1 style="margin-left: 115px;margin-top: 45px;font-size: 20px;height: 0px;font-family: ABeeZee, sans-serif;font-weight: bold;">First Name</h1><input type="text" id="firstname"  name="firstname" style="margin-left: 115px;border-top-width: 18px;width: 399px;height: 35px;margin-top: 40px;">
+        <h1 style="margin-left: 115px;margin-top: 45px;font-size: 20px;height: 0px;font-family: ABeeZee, sans-serif;font-weight: bold;">Last Name</h1><input type="text" id="lastname"  name="lastname"  style="margin-left: 115px;border-top-width: 18px;width: 399px;height: 35px;margin-top: 40px;">
+        <h1 style="margin-left: 115px;margin-top: 45px;font-size: 19px;height: 0px;font-family: ABeeZee, sans-serif;font-weight: bold;">Email&nbsp;</h1><input type="email" id="email"  name="email"  style="margin-left: 115px;border-top-width: 18px;width: 399px;height: 35px;margin-top: 40px;">
+        <h1 style="margin-left: 115px;margin-top: 45px;font-size: 20px;height: 0px;font-family: ABeeZee, sans-serif;font-weight: bold;">Password</h1><input type="password" id="password"  name="password" style="margin-left: 115px;border-top-width: 18px;width: 399px;height: 35px;margin-top: 40px;">
+        
+        <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="margin-top: 53px;margin-left: 105px;width: 407.062px;height: 46px;background: url(&quot;../static/signupassets/img/background.jpg&quot;) center;font-size: 20px;border-radius: 20px;box-shadow: 0px 0px 20px rgb(0,178,255);text-align: center;">Submit</button>
+       </form>
+        <h1 style="margin-left: 681px;margin-top: -129px;color: rgb(255,255,255);height: 24px;">Dollar &amp; A Dream</h1>
+        <h1 style="margin-left: 681px;margin-top: 30px;color: rgb(255,255,255);font-size: 25px;height: 39px;">Create your account and start pitching in your ideas now</h1>
     </div>
-    <div class = "form-group">
-        <label for="firstName">First Name</label>
-        <input type="text" 
-        class="form-control" 
-        id="firstName" 
-        name="firstName"
-        placeholder="Enter first name"/>
-    </div>
-    <div class = "form-group">
-        <label for="password1">Password</label>
-        <input type="password" 
-        class="form-control" 
-        id="password1" 
-        name="password1"
-        placeholder="Enter password"/>
-    </div>
-    <div class = "form-group">
-        <label for="password2">Password</label>
-        <input type="password" 
-        class="form-control" 
-        id="password2" 
-        name="password2"
-        placeholder="Confirm password"/>
-    </div>
-    <button type="submit" class="btn btn-primary">submit</button>
-</form>
-{% endblock %}
+    <script src="../static/signupassets/bootstrap/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
