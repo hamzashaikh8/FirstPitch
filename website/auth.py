@@ -16,7 +16,8 @@ def login():
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
-
+        print('email is: ',email)
+        print('password is: ',password)
         user = User.query.filter_by(email=email).first()
         if user:
             print(password)
