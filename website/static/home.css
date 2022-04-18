@@ -4,6 +4,11 @@ body{
     background-color: black;
 }
 
+nav{
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 60px  rgb(201, 201, 201);
+}
+
 .first-pic{
     width: 40rem;
     height: 25rem;
@@ -12,6 +17,7 @@ body{
     transform: rotate(5deg);
     background-image: url('homepage_pic2.jpg');
     background-size: 40rem;
+    box-shadow: 0px 0px 60px  rgb(177, 177, 177);
 }
 .second-pic{
     width: 40rem;
@@ -22,6 +28,7 @@ body{
     transform: rotate(-5deg);
     background-image: url('homepage_pic1.jpg');
     background-size: 40rem;
+    box-shadow: 0px 0px 60px  rgb(177, 177, 177);
 }
 
 .left{
