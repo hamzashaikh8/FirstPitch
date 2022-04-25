@@ -1,44 +1,44 @@
+{% extends "base.html" %}
+<title>{% block title %}My Profile{% endblock %}</title>
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Profile</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" href="../static/profile.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size:2rem">FirstPitch</a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbar"
-              >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-item nav-link" id="about" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
-                </li>
-              </ul>
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a href="/profile" class="btn btn-outline-dark">My Profile</a>
-                </li>
-              </ul>
+       
+        <div class="modal fade" id="addProjectModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Add Project</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Project Name</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Project Description</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+                </div>
             </div>
-          </nav>
+        </div>
         <div class="wrapper">
             <div class="box">
                 <div class="box-img">
@@ -60,7 +60,7 @@
                         I am very passionate about Web Development, and strive to better myself as a developer, and the development community as a whole.
                     </p>
                     <p>
-                        Over the past year, I've decided to leave my job to pursue my passion of wanting to be entrepreneur and i feel like that dream can finally come true. 
+                        Over the past year, I've decided to leave my job to pursue my passion of wanting to be entrepreneur and I feel like that dream can finally come true. 
                     </p>
 
                     <div class="social">
@@ -72,34 +72,36 @@
                 </div>
             </div>
             <div class="box">
-                <div class="box-img">
-                    <img src="../static/profile_pic.jpg">
+                <div class="project-img">
+                    <img src="../static/nba logo.png">
                 </div>
                 <div class="box-text">
-                    <h1>Firstname Lastname</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-
-                    <div class="social">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <div style="margin-bottom: 45px;">
+                        <h1>My Project #1: NBA TopShot</h1>
+                        <h3 style="font-style: italic; margin-bottom: 10px;">Asking for $10,000 for 20%</h3>
                     </div>
+                    <p>
+                        I've always had a passion for basketball and am an avid fan of the NBA, so being able to create something that is able to link with basketball has been
+                        one of my dreams.
+                    </p>
+                    <p>
+                        <span style="font-weight: bold">Key Features: </span><br><br>
+                        - Able to buy and sell iconic NBA moments like trading cards <br><br>
+                        - Open card pack and uncover some amazing NBA moments <br><br>
+                        - Able to buy and sell iconic NBA moments like trading cards <br><br>
+                        - Open card pack and uncover some amazing NBA moments <br><br>
+                        - Able to buy and sell iconic NBA moments like trading cards <br><br>
+                        - Open card pack and uncover some amazing NBA moments <br><br>
+                    </p>
                 </div>
             </div>
             <div class="add-box">
-                <i class="add-icon fa-solid fa-plus"></i>
-                <div>Add Project</div>               
-            </div>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#addProjectModal">
+                    <i class="add-icon fa-solid fa-plus"></i>
+                    <div>Add Project</div> 
+                </button>              
+            </div>          
         </div>
     </body>
 </html>
+{% endblock %}
