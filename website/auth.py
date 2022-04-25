@@ -39,6 +39,12 @@ def logout():
     logout_user()
     return redirect(url_for('auth.login'))
 
+@auth.route('/projectpage', methods=['GET','POST'])
+@login_required
+def projectpage():
+    if request.method=='POST':
+        flash('Thank you for submitting an offer!', category='success')
+    return render_template("projectpage.html",user=current_user)
 
 @auth.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():

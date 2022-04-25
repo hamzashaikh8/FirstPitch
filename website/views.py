@@ -20,8 +20,3 @@ def home():
 @login_required
 def profile():
     return render_template("profile.html",user=current_user)
-
-@views.route('/projectpage')
-@login_required
-def projectpage():
-    return render_template("projectpage.html",user=current_user)
