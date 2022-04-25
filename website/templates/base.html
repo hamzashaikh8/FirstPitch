@@ -33,10 +33,10 @@
         <ul class="navbar-nav">
           {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-item nav-link" id="about" href="#">About</a>
+            <a class="nav-item nav-link" id="about" href="/home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-item nav-link" id="about" href="/profile">My Profile</a>
+            <a class="nav-item nav-link" id="profile" href="/profile">My Profile</a>
           </li>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -45,7 +45,7 @@
           </ul>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link active" href="/">Home</a>
+            <a class="nav-link active" href="/">About</a>
             </li>
           <li class="nav-item">
             <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
