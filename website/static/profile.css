@@ -44,6 +44,10 @@ body {
     margin-top: 1rem;
 }
 
+.add-box .btn {
+    border: none;
+}
+
 .box {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     width: 80%;
@@ -59,6 +63,12 @@ body {
 .box-img{
     float: left;
     width:35%;
+}
+
+.project-img{
+    float: right;
+    width:35%;
+    padding-left: 8rem;
 }
 
 .box img {
