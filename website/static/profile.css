@@ -26,11 +26,12 @@ body {
 }
 
 .add-box {
-    width: 5%;
-    height: 100px;
+    width: 7.5%;
+    height: 90px;
     display: center;
     margin: 0 auto;
     margin-bottom: 5rem;
+    margin-top: 5rem;
     box-shadow: 0 27px 87px rgba(0,0,0,0.37);
     border-radius: 10px;
     overflow: hidden;
@@ -41,7 +42,7 @@ body {
 
 .add-box .add-icon {
     font-size: 50px;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .add-box .btn {
@@ -50,10 +51,10 @@ body {
 
 .box {
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    width: 80%;
+    width: 100rem;
     height: 800px;
     display: inline-block;
-    margin: 50px 10%;
+    margin: 5rem 10rem 0rem -8rem;
     box-shadow: 0 27px 87px rgba(0,0,0,0.37);
     border-radius: 10px;
     overflow: hidden;
