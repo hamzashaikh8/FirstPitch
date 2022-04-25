@@ -51,12 +51,14 @@ def sign_up():
         last_name = request.form.get('lastname')
         password1 = request.form.get('password')
         password2 = request.form.get('password2')
+        role = request.form.get('role')
 
         print('email is : ',email,type(email))
         print('firstname is : ',first_name,type(first_name))
         print('lastname is : ',last_name,type(last_name))
         print('password1 is : ',password1,type(password1))
         print('password2 is : ',password2,type(password2))
+        print('role is : ',role,type(role))
 
 
         user = User.query.filter_by(email=email).first()
@@ -72,7 +74,7 @@ def sign_up():
             flash('Password must be at least 7 characters.', category='error')
         else:
             new_user = User(email=email, first_name=first_name, last_name=last_name, password=generate_password_hash(
-                password1, method='sha256'))
+                password1, method='sha256'),role=role)
             db.session.add(new_user)
             db.session.commit()
             login_user(new_user, remember=True)
